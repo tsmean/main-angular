@@ -23,7 +23,7 @@ import 'hammerjs';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { NotifyModule } from 'notify-angular';
-import {createResourceModule} from '@tsmean/resource';
+import { ResourceModule } from '@tsmean/resource';
 import {HeroModule} from '@tsmean/hero';
 import {environment} from '../environments/environment';
 
@@ -52,7 +52,7 @@ import {environment} from '../environments/environment';
     MdMenuModule,
     MdIconModule,
     NotifyModule.forRoot(),
-    createResourceModule(environment.api),
+    ResourceModule.forRoot(environment.api),
     HeroModule.forRoot()
   ],
   providers: [
