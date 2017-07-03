@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {LandingComponent} from '../components/landing/landing.component';
-import {LoginComponent} from '../components/login/login.component';
 import {PageNotFoundComponent} from '../components/page-not-found/page-not-found.component';
-import {SignUpComponent} from '../components/sign-up/sign-up.component';
-import {AuthGuardService} from '../services/auth-guard.service';
 import {DashboardComponent} from '../components/dashboard/dashboard.component';
+
+import {AuthGuardService} from '@tsmean/user-angular/auth-guard.service';
+
+import {LoginComponent} from '@tsmean/user-angular/login/login.component';
+import {SignUpComponent} from '@tsmean/user-angular/sign-up/sign-up.component';
+import {ProfileComponent} from '@tsmean/user-angular/profile/profile.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent, canActivate: [AuthGuardService]},
   { path: 'login', component: LoginComponent, canActivate: [AuthGuardService]},
   { path: 'signup', component: SignUpComponent, canActivate: [AuthGuardService]},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService]},
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]}, /* work in progress */
   { path: '**', component: PageNotFoundComponent }
 ];
 

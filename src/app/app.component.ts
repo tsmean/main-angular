@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
-import {appCookies} from './services/cookies';
 
 @Component({
   selector: 'app-root',

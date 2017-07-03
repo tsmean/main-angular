@@ -26,6 +26,7 @@
     "@ngrx/store": "^2.2.2",
     "@tsmean/hero": "^1.0.6",
     "@tsmean/resource": "^2.0.1",
+    "@tsmean/user-angular": "^1.0.3",
     "@tsmean/utils": "^1.1.1",
     "core-js": "^2.4.1",
     "express": "^4.15.3",

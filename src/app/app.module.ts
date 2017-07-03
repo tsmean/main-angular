@@ -2,16 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {UserService} from './services/user.service';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {TopnavComponent} from './components/topnav/topnav.component';
-import {SignUpComponent} from './components/sign-up/sign-up.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {LandingComponent} from './components/landing/landing.component';
 import {JumbotronComponent} from './components/jumbotron/jumbotron.component';
 import {SpacerComponent} from './components/spacer/spacer.component';
-import {LoginComponent} from './components/login/login.component';
-
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -26,17 +22,18 @@ import { NotifyModule } from 'notify-angular';
 import { ResourceModule } from '@tsmean/resource';
 import {HeroModule} from '@tsmean/hero';
 import {environment} from '../environments/environment';
+import {UserService} from '@tsmean/user-angular/user.service';
+
+import {UserModule} from '@tsmean/user-angular/user.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopnavComponent,
-    SignUpComponent,
     PageNotFoundComponent,
     LandingComponent,
     JumbotronComponent,
     SpacerComponent,
-    LoginComponent,
     DashboardComponent
   ],
   imports: [
@@ -53,11 +50,8 @@ import {environment} from '../environments/environment';
     MdIconModule,
     NotifyModule.forRoot(),
     ResourceModule.forRoot(environment.api),
-    HeroModule.forRoot()
-  ],
-  providers: [
-    UserService
-
+    HeroModule.forRoot(),
+    UserModule.forRoot(environment.api)
   ],
   bootstrap: [AppComponent]
 })
