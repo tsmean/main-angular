@@ -20,7 +20,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { NotifyModule } from 'notify-angular';
 import { ResourceModule } from '@tsmean/resource';
-import {HeroModule} from '@tsmean/hero';
+import {AnimalModule} from '@tsmean/animal';
 import {environment} from '../environments/environment';
 import {UserService} from '@tsmean/user-angular/user.service';
 
@@ -50,7 +50,7 @@ import {UserModule} from '@tsmean/user-angular/user.module';
     MdIconModule,
     NotifyModule.forRoot(),
     ResourceModule.forRoot(environment.api),
-    HeroModule.forRoot(),
+    AnimalModule.forRoot(),
     UserModule.forRoot(environment.api)
   ],
   bootstrap: [AppComponent]
