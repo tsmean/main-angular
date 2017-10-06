@@ -16,7 +16,7 @@ export class JumbotronComponent implements OnInit {
   }
 
   doStart() {
-    this.notifyService.success('Create an account to see app in action!');
+    document.getElementById('animal-input').scrollIntoView(); 
   }
 
 }
