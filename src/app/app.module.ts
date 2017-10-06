@@ -12,8 +12,8 @@ import {SpacerComponent} from './components/spacer/spacer.component';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MdInputModule, MdCardModule, MdButtonModule, MdToolbarModule, MdMenuModule,
-  MdIconModule
+  MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule,
+  MatIconModule
 } from '@angular/material';
 import 'hammerjs';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -42,12 +42,12 @@ import {UserModule} from '@tsmean/user-angular/user.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    MdInputModule,
-    MdButtonModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdMenuModule,
-    MdIconModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
     NotifyModule.forRoot(),
     ResourceModule.forRoot(environment.api),
     AnimalModule.forRoot(),
